@@ -1,2 +1,3 @@
-jupyterlab==3.0.17
+jupyterlab
 nbgitpuller
+
