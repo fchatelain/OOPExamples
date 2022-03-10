@@ -19,7 +19,7 @@ RUN curl -L https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-
 # Unpack and install the kernel
 RUN unzip ijava-kernel.zip -d ijava-kernel \
   && cd ijava-kernel \
-  && python3.7 install.py --sys-prefix # FIX
+  && python3.6 install.py --sys-prefix # FIX
 
 # Set up the user environment
 
