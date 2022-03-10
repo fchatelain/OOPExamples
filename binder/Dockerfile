@@ -1,9 +1,9 @@
 FROM openjdk:11.0.3-jdk
 
 RUN apt-get update
-RUN apt-get install -y libffi-dev # FIX
 RUN apt-get install -y python3-pip
-RUN apt-get install -y python3.6 # FIX
+RUN apt-get install -y libffi-dev # FIX IJAVA broken deps
+RUN apt-get install -y python3.6 # FIX IJAVA broken deps
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY . .
