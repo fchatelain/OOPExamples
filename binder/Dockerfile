@@ -3,7 +3,7 @@ FROM openjdk:11.0.3-jdk
 RUN apt-get update
 RUN apt-get install -y libffi-dev # FIX
 RUN apt-get install -y python3-pip
-RUN apt-get install -y python3.7
+RUN apt-get install -y python3.6 # FIX
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY . .
@@ -19,7 +19,7 @@ RUN curl -L https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-
 # Unpack and install the kernel
 RUN unzip ijava-kernel.zip -d ijava-kernel \
   && cd ijava-kernel \
-  && python3.7 install.py --sys-prefix
+  && python3.7 install.py --sys-prefix # FIX
 
 # Set up the user environment
 
